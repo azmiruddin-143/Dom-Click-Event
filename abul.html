@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abul miar khomota</title>
+</head>
+<body>
+    <h1>Ami Onk boro Neta</h1>
+    <ul id="parent">
+        <li class="neta">hariya khomota </li>
+        <li class="neta">monarbag khomota</li>
+        <li class="neta">union khomota</li>
+        <li class="neta"> sonargaon khomota </li>
+        <li class="neta">Narayanganj khomota</li>
+    </ul>
+    <button id="add-list">Add List</button>
+
+     <script>
+        // let allclass =  document.getElementsByClassName("neta");
+        //    for(let man of allclass) {
+        //       man.addEventListener("click",function() {
+        //        man.parentNode.removeChild(man);
+        //       })
+        //    }
+
+           document.getElementById('parent').addEventListener('click', function(event){
+               
+            event.target.parentNode.removeChild(event.target)
+           })
+            
+           document.getElementById("add-list").addEventListener("click", function() {
+                let mainneta = document.getElementById("parent");
+                let li = document.createElement("li");
+                li.innerText ="Dhaka khomota";
+                // li.addEventListener("click", function() {
+                //     li.parentNode.removeChild(li)
+                // })
+                mainneta.appendChild(li)
+
+           })
+          
+
+     </script>
+</body>
+</html>
